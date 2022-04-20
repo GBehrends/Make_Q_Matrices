@@ -3,7 +3,7 @@
 ### Q.Matrix: 
 # For extracting Q matrices representing the ancestry proportions/assignment 
 # probabilities from standard STRUCTURE outputs after running on the command 
-# line. 
+# line. Q matrices can then be plotted with ease in R.  
 #
 #-------------------------------------------------------------------------------
 #
@@ -18,7 +18,7 @@
 # extraCols - a character vector of names of any extra/nonstandard columns such 
 # those containing location information.
 #
---------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------
 #
 ## Output:
 # A data frame containing the sample ID column, columns corresponding to each k,
@@ -46,8 +46,6 @@ Q.Matrix <- function(file, k, extraCols) {
   Q <- gsub(spaces, replacement = "\t", Q)
   Q <- read.table(text = Q, sep = "\t")
   Q <- Q[-grep(excess, Q)] 
-  remove(spaces)
-  remove(excess)
   
   if (missing(extraCols)) {
     print("No extra column names specified...")
