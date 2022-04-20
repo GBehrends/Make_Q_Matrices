@@ -13,7 +13,7 @@
 #-------------------------------------------------------------------------------
 # 
 ## Input:
-#file - path to f file outputted by command line STRUCTURE run
+# file - path to f file outputted by command line STRUCTURE run
 # k - the number of k selected for STRUCTURE run
 # extraCols - a character vector of names of any extra/nonstandard columns such 
 # those containing location information.
@@ -22,7 +22,9 @@
 #
 ## Output:
 # A data frame containing the sample ID column, columns corresponding to each k,
-# and the extra columns, respectively.
+# and the extra columns, respectively. If extra columns exist but no names are
+# given, column names will be assigned a numerical value 1 through the number 
+# present. 
 #
 #_______________________________________________________________________________
 #
