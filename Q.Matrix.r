@@ -24,7 +24,7 @@
 # A data frame containing the sample ID column, columns corresponding to each k,
 # and the extra columns, respectively. If extra columns exist but no names are
 # given, column names will be assigned a numerical value 1 through the number 
-# present. 
+# of columns. 
 #
 #_______________________________________________________________________________
 #
